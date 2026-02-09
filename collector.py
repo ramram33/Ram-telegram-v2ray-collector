@@ -13,7 +13,7 @@ CHANNELS = [
 ]
 
 # الگوهای شناسایی پروتکل‌ها و لینک‌های ساب
-CONFIG_PATTERN = re.compile(r'(?:vmess|vless|ss|shadowsocks|trojan)://[^\s<>\"]+')
+CONFIG_PATTERN = re.compile(r'(?:vmess|vless|ss|shadowsocks|trojan)://[^\s<>\"\'\?]+')
 SUB_LINK_PATTERN = re.compile(r'https?://[^\s<>\"]+')
 
 def get_content(url: str) -> str:
@@ -84,4 +84,5 @@ def main():
     print(f"✅ پایان. {len(config_list)} کانفیگ جمع‌آوری شد.")
 
 if __name__ == "__main__":
+
     main()
